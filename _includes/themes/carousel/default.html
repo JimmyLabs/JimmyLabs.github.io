@@ -284,16 +284,36 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">Project name</a>
+            <a class="brand" href="#">JimLabs</a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li class="active"><a href="{{ HOME_PATH }}">Home</a></li>
+               <!-- <li class="active"><a href="{{ HOME_PATH }}">Home</a></li>
                 <li><a href="/archive.html">Archive</a></li>
-                <li><a href="/pages.html">Pages</a></li>
+                <li><a href="/pages.html">Pages</a></li>-->
                 <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-                <li><a  href="/categories.html">Categories</a></li>
-				<li><a  href="/tags.html">Tags</a></li>
+                <!-- <li><a  href="/categories.html">Categories</a></li>
+				<li><a  href="/tags.html">Tags</a></li>-->
+				<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Team <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </li>
+				<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Demonstration<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Building Show</a></li>
+                    <li><a href="#">Vehicle Show</a></li>
+                    <li><a href="#">Clothing Purchase</a></li>
+                    <li><a href="#">AR Application Development</a></li>
+                    <li><a href="#">3D GIS Management System</a></li>
+                  </ul>
+                </li>
+				<li><a  href="#">Blog</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
@@ -312,18 +332,18 @@
           <img src="{{ ASSET_PATH }}/img/examples/Hydrangeas.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Hydrangeas</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+              <h1>Team Introduction 团队介绍</h1>
+              <p class="lead"></p>
+              <a class="btn btn-large btn-primary" href="./about.html">Sign up today</a>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="{{ ASSET_PATH }}/img/examples/Jellyfish.jpg" alt="">
+          <img src="{{ ASSET_PATH }}/img/examples/psb.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Jellyfish</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Kinect Custom Development </h1>
+              <!--<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
               <a class="btn btn-large btn-primary" href="#">Learn more</a>
             </div>
           </div>
@@ -332,8 +352,8 @@
           <img src="{{ ASSET_PATH }}/img/examples/Lighthouse.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Lighthouse</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Indoor Environment Display Platform 室内环境展示平台</h1>
+              <!--<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
               <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
             </div>
           </div>
@@ -349,25 +369,25 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-		{{ content }}
+		
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
+          <h2>硬件</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
+          <h2>软件</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
+          <h2>服务</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div><!-- /.span4 -->
@@ -376,7 +396,7 @@
 
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
+     <!-- <hr class="featurette-divider">
 
       <div class="featurette">
         <img class="featurette-image pull-right" src="{{ ASSET_PATH }}/img/examples/browser-icon-chrome.png">
@@ -400,7 +420,7 @@
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
 
-      <hr class="featurette-divider">
+      <hr class="featurette-divider">-->
 
       <!-- /END THE FEATURETTES -->
 
@@ -408,9 +428,9 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2013 JimLabs, Inc. &middot; </p>
       </footer>
-		<div id="footer">
+		<!--<div id="footer">
   	<address>
   		<span class="copyright">
   			Content by <a href="/info/site.html">{{ site.author.name }}</a>. Design by 
@@ -422,7 +442,7 @@
   			Powered by <a href="http://github.com/mojombo/jekyll/" title="A static, minimalist CMS">Jekyll</a>
   		</span>
   	</address>
-  </div>
+  </div>-->
     </div><!-- /.container -->
 
 	
@@ -434,7 +454,7 @@
     <script src="{{ ASSET_PATH }}/js/bootstrap-transition.js"></script>
     <script src="{{ ASSET_PATH }}/js/bootstrap-alert.js"></script>
     <script src="{{ ASSET_PATH }}/js/bootstrap-modal.js"></script>
-    <script src="{{ ASSET_PATH }}/js/bootstrap-dropdown.js"></script>
+	<script src="{{ ASSET_PATH }}/js/bootstrap-dropdown.js"></script>
     <script src="{{ ASSET_PATH }}/js/bootstrap-scrollspy.js"></script>
     <script src="{{ ASSET_PATH }}/js/bootstrap-tab.js"></script>
     <script src="{{ ASSET_PATH }}/js/bootstrap-tooltip.js"></script>
