@@ -78,7 +78,8 @@
 
     .carousel .container {
       position: relative;
-      z-index: 9;
+      z-index: -1;
+	  
     }
 
     .carousel-control {
@@ -142,7 +143,7 @@
     ------------------------- */
 
     .featurette-divider {
-      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+      margin: 10px 0; /* Space out the Bootstrap <hr> more */
     }
     .featurette {
       padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
@@ -326,8 +327,8 @@
 
     <!-- Carousel
     ================================================== -->
-   <!-- <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
+    <div id="myCarousel" class="carousel slide">
+      <!--<div class="carousel-inner">
         <div class="item active">
           <img src="./assets/themes/carousel/img/examples/Hydrangeas.jpg" alt="">
           <div class="container">
@@ -360,8 +361,8 @@
         </div>
       </div>
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div>--><!-- /.carousel -->
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>-->
+    </div><!-- /.carousel -->
 
  
     <!-- Marketing messaging and featurettes
@@ -369,39 +370,18 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-	      <div>我们是一群充满热情的、想要改变世界的程序员，我们是一个自发性的组织，
-		  在这里你可以看到我们的团队，看到我们团队的工作成果，我们开发的东西主要集中在深度
-			点云数据的处理、WebGL的前端显示和其他一些更酷的事情。</div>
+	      
 		
 
       <!-- Three columns of text below the carousel -->
-      <!--<div class="row">
-        <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>--><!-- /.span4 -->
-        <!--<div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>--><!-- /.span4 -->
-        <!-- <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>--> <!-- /.span4 -->
-      <!--</div>--><!-- <!-- /.row -->
 
 
       <!-- START THE FEATURETTES -->
 
-     <!-- <hr class="featurette-divider">
-
-      <div class="featurette">
+      <hr class="featurette-divider">
+		<div><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们是一群充满热情的、想要改变世界的程序员，我们是一个自发性的组织，
+		  在这里你可以看到我们的团队，看到我们团队的工作成果，我们开发的东西主要集中在深度点云数据的处理、WebGL的前端显示和其他一些更酷的事情。</h2></div>
+      <!--<div class="featurette">
         <img class="featurette-image pull-right" src="./assets/themes/carousel/img/examples/browser-icon-chrome.png">
         <h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
@@ -421,11 +401,38 @@
         <img class="featurette-image pull-right" src="./assets/themes/carousel/img/examples/browser-icon-safari.png">
         <h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
+      </div>-->
 
-      <hr class="featurette-divider">-->
+      <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
+	   <div class="row">
+      
+	   <<div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Heading</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div> <!-- /.span4 -->
+		<div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div> <!-- /.span4 -->
+      </div><!-- <!-- /.row -->
 
 
       <!-- FOOTER -->
