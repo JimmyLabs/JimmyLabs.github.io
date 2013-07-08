@@ -1,7 +1,7 @@
 ({
     "geoItems":[
         {"id":"mark", "transparent":false, "opacity":1, "edit":false, "path":"./model/yuanzhui.js"},
-       {"id":"bangongyongpin", "transparent":false, "opacity":1, "edit":false, "path":"./model/bangongyongpin.js"},
+		{"id":"bangongyongpin", "transparent":false, "opacity":1, "edit":false, "path":"./model/bangongyongpin.js"},
         {"id":"bangongzhuo", "transparent":false, "opacity":1, "edit":false, "path":"./model/bangongzhuo.js"},
         {"id":"guizi", "X":2.719, "Y":-5.075, "Z":0.835, "transparent":false, "opacity":1, "edit":true, "path":"./model/guizi.js"},
         {"id":"shafa", "X":-2.299, "Y":-4.996, "Z":0.457, "transparent":false, "opacity":1, "edit":true, "path":"./model/shafa.js"},
