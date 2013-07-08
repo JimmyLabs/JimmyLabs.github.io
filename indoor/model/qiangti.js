@@ -22,7 +22,7 @@
 "colorSpecular"  : [0.9000, 0.9000, 0.9000],
 "transparency"  : 1.0,
 "specularCoef"  : 30.0,
-"mapDiffuse"    : "secai5.jpg",
+"mapDiffuse"    : "./secai5.jpg",
 "vertexColors" : false
 }
 
