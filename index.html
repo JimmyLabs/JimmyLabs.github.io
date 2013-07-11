@@ -1,0 +1,90 @@
+---
+layout: default
+title: JimLabs
+---
+{% include JB/setup %}
+<script src="./assets/themes/carousel/js/jquery.js"></script>
+    <script src="./assets/themes/carousel/js/bootstrap-transition.js"></script>
+    <script src="./assets/themes/carousel/js/bootstrap-alert.js"></script>
+    <script src="./assets/themes/carousel/js/bootstrap-modal.js"></script>
+	<script src="./assets/themes/carousel/js/bootstrap-dropdown.js"></script>
+    <script src="./assets/themes/carousel/js/bootstrap-scrollspy.js"></script>
+    <script src="./assets/themes/carousel/js/bootstrap-tab.js"></script>
+    <script src="./assets/themes/carousel/js/bootstrap-tooltip.js"></script>
+    <script src="./assets/themes/carousel/js/bootstrap-popover.js"></script>
+    <script src="./assets/themes/carousel/js/bootstrap-button.js"></script>
+    <script src="./assets/themes/carousel/js/bootstrap-collapse.js"></script>
+    <script src="./assets/themes/carousel/js/bootstrap-carousel.js"></script>
+    <script src="./assets/themes/carousel/js/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel();
+		   
+        })
+      }(window.jQuery)
+    </script>
+    <script src="./assets/themes/carousel/js/holder/holder.js"></script>
+	 <link href="./assets/themes/carousel/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/themes/carousel/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="./assets/themes/carousel/css/style.css" rel="stylesheet">
+<!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        
+		<div class="item ">
+          <img src="./assets/themes/carousel/img/examples/Hydrangeas.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Team Introduction </h1>
+              <p class="lead"></p>
+              <a class="btn btn-large btn-primary" href="./team.html">Details</a>
+            </div>
+          </div>
+        </div>
+		<div class="item ">
+          <img src="./assets/themes/carousel/img/examples/psb.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Interactive display car</h1>
+              <a class="btn btn-large btn-primary" href="#">Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="item active">
+          <img src="./assets/themes/carousel/img/examples/indoor.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Indoor Roaming</h1>
+              <a class="btn btn-large btn-primary" href="./indoor/index.html">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+	
+	<div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span4">
+          <h2>News</h2>
+          <p></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <h2>Blog</h2>
+          <p>
+			<ul>
+　　　　		{% for post in site.posts %}
+　　　　　　  <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					{{ post.date | date_to_string }} </li>
+　　　			　{% endfor %}
+　　		</ul>
+		  </p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+	</div>
