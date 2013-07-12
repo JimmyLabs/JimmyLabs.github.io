@@ -1,0 +1,16 @@
+({
+    "geoItems":[
+        {"id":"dimian", "path":"../temple/model/m1/dimian1.js"},
+        {"id":"dimian", "path":"../temple/model/m1/dimian2.js"},
+        {"id":"lou", "path":"../temple/model/m1/dalou1-a.js"},
+        {"id":"lou", "path":"../temple/model/m1/dalou1.js"},
+        {"id":"lou", "path":"../temple/model/m1/dalou2-a.js"},
+        {"id":"lou", "path":"../temple/model/m1/dalou2.js"},
+        {"id":"mark", "path":"../temple/model/m1/yuanzhui.js"},
+        {"id":"tiexiang", "path":"../temple/model/dd/tiexiang.js"},
+        {"id":"tiexiang", "path":"../temple/model/dd/tiexiang.js"},
+        {"id":"tiexiang", "path":"../temple/model/dd/tiexiang.js"},
+        {"id":"tiexiang", "path":"../temple/model/dd/tiexiang.js"},
+        {"id":"tiexiang", "path":"../temple/model/dd/tiexiang.js"}
+    ]
+})

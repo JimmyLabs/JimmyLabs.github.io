@@ -83,3 +83,49 @@ body {
 #bottom li:hover {
     cursor: pointer;
 }
+
+#loadMask {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #dcdcdc;
+}
+
+#background {
+    width: 200px;
+    z-index: 1;
+    background-color: #d3d7d4;
+}
+
+#overLoad {
+    width: 0px;
+    z-index: 2;
+    background-color: #0099cc;
+}
+
+#showTime {
+    width: 200px;
+    color: #ffffff;
+    font-size: 16px;
+    z-index: 3;
+}
+
+#background, #overLoad, #showTime {
+    height: 20px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;;
+}
+
+#flag {
+    display: none;
+    position: absolute;
+    width: 30%;
+    bottom: 50%;
+    right: 35%;
+    background-color: #ffffff;
+}

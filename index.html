@@ -33,7 +33,7 @@ title: JimLabs
     ================================================== -->
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
-        
+      <!--   
 		<div class="item ">
           <img src="./assets/themes/carousel/img/examples/Hydrangeas.jpg" alt="">
           <div class="container">
@@ -52,7 +52,7 @@ title: JimLabs
               <a class="btn btn-large btn-primary" href="#">Details</a>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="item active">
           <img src="./assets/themes/carousel/img/examples/indoor.jpg" alt="">
           <div class="container">
@@ -67,24 +67,24 @@ title: JimLabs
       <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div><!-- /.carousel -->
 	
-	<div class="container marketing">
+	<!-- <div class="container marketing">
 
-      <!-- Three columns of text below the carousel -->
+     
       <div class="row">
         <div class="span6">
           <h2>News</h2>
           <p></p>
-        </div><!-- /.span4 -->
+        </div>
         <div class="span6">
           <h2>Blog</h2>
           <p>
 			<ul>
-　　　　		{% for post in site.posts %}
+　　　　		{% for post in site.posts limit:3%}
 　　　　　　  <li><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					{{ post.date | date_to_string }} </li>
 　　　			　{% endfor %}
 　　		</ul>
 		  </p>
-        </div><!-- /.span4 -->
-      </div><!-- /.row -->
-	</div>
+        </div>
+      </div>
+	</div> -->
