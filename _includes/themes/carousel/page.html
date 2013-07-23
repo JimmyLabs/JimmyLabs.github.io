@@ -1,16 +1,12 @@
-<article class="unit-article layout-page">
-	<div class="unit-inner unit-article-inner">
-		<div class="content">
-			
+<div class="container marketing">
+    <br >
+    <br >
+    <br >
+    <br >
+    <br >
+    {{content}}
+    {% if page.comments %}
+    {% include comments.md %}
+    {% endif %}
+</div>
 
-			<div class="bd">
-				<div class="entry-content">
-					{{ content }}
-				</div><!-- entry-content -->
-			</div><!-- bd -->
-
-			
-
-		</div><!-- content -->
-	</div><!-- unit-inner -->
-</article>

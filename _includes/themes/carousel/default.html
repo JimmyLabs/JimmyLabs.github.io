@@ -16,7 +16,9 @@
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="{{ ASSET_PATH }}/js/html5shiv.js"></script>
+      <script src="{{ ASSET_PATH }}/js/html5shiv.js">
+
+      </script>
     <![endif]-->
 
     <!-- Fav and touch icons -->
@@ -42,23 +44,22 @@
             </button>
             <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
            
-            <a class="brand" href=".">JimLabs</a>
+            <a class="brand" href="{{ BASE_PATH }}/">JimLabs</a>
+
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li><a href="#">Team Introduction </a></li>  <!-- ./team.html -->
+                <li><a href="#">Team Introduction </a></li>  <!-- {{ BASE_PATH }}/team.html -->
 				<li class="dropdown">
                   <a href="." class="dropdown-toggle" data-toggle="dropdown">Demonstrate<b class="caret"></b></a>
 				  <ul class="dropdown-menu">
-					<li><a href="./indoor/index.html">Indoor Roaming</a></li>
-					<!-- <li><a href="./deformation.html">Deformation monitoring system</a></li>
-					<li><a href="./car.html">Interactive display car</a></li>
-                    <li><a href="./scene.html">3d Scenario scanning system</a></li>
-                    <li><a href="./ar.html">Augmented reality system development(ar)</a></li>
-                    <li><a href="./gis.html">3D GIS Management System</a></li> -->
+					<li><a href="{{ BASE_PATH }}/indoor/index.html">Indoor Roaming</a></li>
+					<li><a href="{{ BASE_PATH }}/car.html">Interactive display car</a></li>
+                    <li><a href="{{ BASE_PATH }}/ar.html">Augmented reality system development(ar)</a></li>
+                    <li><a href="{{ BASE_PATH }}/gis.html">3D GIS Management System</a></li>
                   </ul>
                 </li>
-				<li><a  href="#">Blog</a></li><!-- ./blog.html -->
+				<li><a  href="#">Blog</a></li><!--{{ BASE_PATH }}/blog/index.html-->
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
@@ -70,8 +71,10 @@
 
 	{{content}}
 
+
     <div class="container marketing">
       <!-- FOOTER -->
+        <hr>
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
         <p class="pull-left">&copy; 2013 JimLabs, Inc.   </p>  

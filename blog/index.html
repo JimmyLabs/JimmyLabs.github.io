@@ -1,0 +1,95 @@
+---
+layout: page
+title: "index"
+description: ""
+---
+{% include JB/setup %}
+<p></p>
+<div class="container marketing">
+    <div class="row">
+        <div class="span8">
+            <ul class="listing" style="list-style-type:none ">
+                {% for post in paginator.posts %}
+                <li class="listing-item">
+                    <h4> <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <a  style="font-size:30px" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
+                   <hr>
+                    {{ post.content }}
+                </li>
+                {% endfor %}
+            </ul>
+            <br>
+            <br>
+            <div id="pagination">
+                <div class="pagenavi">
+                    <span class="page_number">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第{{paginator.page}}页&nbsp;/&nbsp;共{{paginator.total_pages}}页</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/blog/">第一页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {% if paginator.previous_page %}
+                        {% if paginator.previous_page == 1 %}
+                            <a href="/blog/"><<前一页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        {% else %}
+                             <a href="/blog/page{{paginator.previous_page}}"><<前一页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        {% endif %}
+                    {% else %}
+                            <span class="previous disabled"><<前一页</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {% endif %}
+
+                        {% if paginator.page == 1 %}
+                             <span class="current-page">1</span>
+                        {% else %}
+                             <a href="/blog/{{paginate_path}}">1</a>
+                        {% endif %}
+                    {% for count in (2..paginator.total_pages) limit:8 %}
+                        {% if count == paginator.page %}
+                            <span class="current-page">{{count}}</span>
+                        {% else %}
+                            <a href="/blog/page{{count}}">{{count}}</a>
+                         {% endif %}
+                    {% endfor %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {% if paginator.next_page %}
+                    <a href="/blog/page{{paginator.next_page}}">后一页>></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--{{ paginator.next_page_path }}-->
+                    {% else %}
+                    <span>后一页>></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {% endif %}
+                    <a href="/blog/page{{paginator.total_pages}}">最后一页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div class="span3" style="background-color:#EEEEE0">
+            <div >
+              <h4 style="background-color:  #0088cc;height: 50px; color: #FFFFFF;line-height:50px; overflow:hidden;margin: 0 ; padding-left:25px;" >
+                    Recent Posts </h4>
+                <ul style="list-style-type:none; margin: 2px 0 2px 25px">
+                                {% for post in site.posts limit:3%}
+                    　<li  style="line-height: 10px;"><a href="{{ post.url }}">{{ post.title }}</a> </li>
+                    　　　{% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h4 style="background-color:  #0088cc;height: 50px;color: #FFFFFF;line-height:50px; overflow:hidden; margin: 0 ; padding-left:25px;">
+                    Category List </h4>
+                <ul style="list-style-type:none; margin: 2px 0 5px 25px ">
+                    {% for cat in site.categories %}
+                    <li style="line-height: 10px;"><a href="#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} ({{ cat[1].size }})</a> </li>
+                    　　　{% endfor %}
+                </ul>
+
+            </div>
+            <div>
+                <h4 style="background-color:  #0088cc;height: 50px;color: #FFFFFF;line-height:50px; overflow:hidden; margin: 0 ; padding-left:25px;">
+                    Tag List </h4>
+                <ul style="list-style-type:none;  margin: 2px 0 2px 25px">
+                    {% for tag in site.tags %}
+                    <li style="line-height: 10px;"><a href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag[0] }}({{ tag[1].size }})</a> </li>
+                    　　　{% endfor %}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+</div>

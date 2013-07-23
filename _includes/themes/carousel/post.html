@@ -1,8 +1,48 @@
 <div class="container marketing">
-	<hr >
-		<hr >
-		<hr >
-		
+	<br >
+    <br >
+    <br >
+    <br >
+    <h1 >{{ page.title }}</h1>
+    <hr>
+    <div class="row">
+        <div class="span8">
 		{{content}}
-		<hr >
+            <div style=" float:left;">
+                <h4>
+                    <a {% if page.previous %} href="{{ site.url }}{{ page.previous.url }}" class="pageNav"{% endif %} {% unless page.previous %} class="pageNavInvalid" {% endunless %} >Previous : </a>
+                    {{ page.previous.title limit:3 }}
+
+                </h4>
+                </div><div  style=" float:right;">
+                <h4>
+                    <a {% if page.next %} href="{{ site.url }}{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="pageNavInvalid" {% endunless %} >Next : </a>
+                    {{ page.next.title limit:3 }}
+                </h4>
+            </div>
+        </div>
+        <div class="span3">
+           <div>
+               <h4>Published Time : </h4>
+               <h4>&nbsp;&nbsp;&nbsp;&nbsp;{{ page.date | date:"%Y-%m-%d" }}</h4>
+           </div>
+            <div>
+                <h4>Categories : </h4>
+                <h4>{% for cat in page.categories %}
+                    <a href="/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
+                    {% endfor %}</h4>
+            </div>
+            <div>
+                <h4>Tags : </h4>
+                <h4>{% for tag in page.tags %}
+                    <a href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+                    {% endfor %}</h4>
+            </div><br><br>
+
+        </div>
+
+
+    </div>
+    {% include comments.md %}
 </div>
+
