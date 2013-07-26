@@ -1,0 +1,40 @@
+---
+title: Tags
+layout: page
+---
+
+<div id='tag_cloud'>
+  <ul style="overflow: hidden;">
+{% for tag in site.tags %}
+     <li style="float: left;background: #EEEEE0;line-height: 28px;display: list-item;margin: 3px;color: #005F6B;">
+		<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}"  style="margin: 3px;padding: 3px 6px;">{{ tag[0] }}
+			<span style="vertical-align: super;font-size: 1em;" >{{ tag[1].size }}</span>
+		</a>
+	</li>
+{% endfor %}
+   </ul>
+</div>
+
+<ul class="listing">
+{% for tag in site.tags %}
+  <li class="listing-seperator" id="{{ tag[0] }}"  style="font-size: 21px;font-weight: bold;margin: 5px;line-height: 32px;">{{ tag[0] }}</li>
+{% for post in tag[1] %}
+  <li class="listing-item"  style="list-style-type: square;margin:5px 0 5px 60px;">
+  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+  <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" style="margin-left: 30px;">{{ post.title }}</a>
+  </li>
+{% endfor %}
+{% endfor %}
+</ul>
+
+<script src="/assets/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script>
+<script language="javascript">
+$.fn.tagcloud.defaults = {
+    size: {start: 1, end: 1, unit: 'em'},
+      color: {start: '#f8e0e6', end: '#ff3333'}
+};
+
+$(function () {
+    $('#tag_cloud a').tagcloud();
+});
+</script>

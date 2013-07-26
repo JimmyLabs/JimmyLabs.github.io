@@ -224,7 +224,7 @@ textarea {
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
@@ -811,6 +811,7 @@ h4 small {
 
 ul,
 ol {
+  list-style-type: none;
   padding: 0;
   margin: 0 0 10px 25px;
 }
@@ -894,7 +895,7 @@ dd {
 }
 
 hr {
-  margin: 10px 0;
+  margin: 15px 0;
   border: 0;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #ffffff;

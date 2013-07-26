@@ -1,27 +1,23 @@
 ---
 layout: page
-title: "index"
+title: "Blog List"
 description: ""
 ---
 {% include JB/setup %}
-<p></p>
-<div class="container marketing">
-    <div class="row">
-        <div class="span8">
+        <div>
             <ul class="listing" style="list-style-type:none ">
                 {% for post in paginator.posts %}
-                <li class="listing-item">
-                    <h4> <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <a  style="font-size:30px" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
-                   <hr>
-                    {{ post.content }}
+                <li class="listing-item" style="margin: 7px 0">
+                   <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                   <a  style="font-size:20px;margin-left: 50px;" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                   <!--<br>
+                    {{ post.content }}-->
                 </li>
                 {% endfor %}
             </ul>
-            <br>
-            <br>
-            <div id="pagination">
+        </div>
+
+            <div id="pagination" style="margin-top: 13px">
                 <div class="pagenavi">
                     <span class="page_number">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第{{paginator.page}}页&nbsp;/&nbsp;共{{paginator.total_pages}}页</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/blog/">第一页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -56,40 +52,3 @@ description: ""
                     <a href="/blog/page{{paginator.total_pages}}">最后一页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
             </div>
-        </div>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-        <div class="span3" style="background-color:#EEEEE0">
-            <div >
-              <h4 style="background-color:  #0088cc;height: 50px; color: #FFFFFF;line-height:50px; overflow:hidden;margin: 0 ; padding-left:25px;" >
-                    Recent Posts </h4>
-                <ul style="list-style-type:none; margin: 2px 0 2px 25px">
-                                {% for post in site.posts limit:3%}
-                    　<li  style="line-height: 10px;"><a href="{{ post.url }}">{{ post.title }}</a> </li>
-                    　　　{% endfor %}
-                </ul>
-            </div>
-            <div>
-                <h4 style="background-color:  #0088cc;height: 50px;color: #FFFFFF;line-height:50px; overflow:hidden; margin: 0 ; padding-left:25px;">
-                    Category List </h4>
-                <ul style="list-style-type:none; margin: 2px 0 5px 25px ">
-                    {% for cat in site.categories %}
-                    <li style="line-height: 10px;"><a href="#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} ({{ cat[1].size }})</a> </li>
-                    　　　{% endfor %}
-                </ul>
-
-            </div>
-            <div>
-                <h4 style="background-color:  #0088cc;height: 50px;color: #FFFFFF;line-height:50px; overflow:hidden; margin: 0 ; padding-left:25px;">
-                    Tag List </h4>
-                <ul style="list-style-type:none;  margin: 2px 0 2px 25px">
-                    {% for tag in site.tags %}
-                    <li style="line-height: 10px;"><a href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag[0] }}({{ tag[1].size }})</a> </li>
-                    　　　{% endfor %}
-                </ul>
-
-            </div>
-        </div>
-    </div>
-
-</div>

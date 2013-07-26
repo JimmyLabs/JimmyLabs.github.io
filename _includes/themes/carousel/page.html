@@ -3,10 +3,48 @@
     <br >
     <br >
     <br >
-    <br >
-    {{content}}
+    <br>
+
+    <div class="row">
+        <div class="span8">
+            <h2 style="font-weight: bold">{{ page.title }}</h2>
+            <hr>
+            {{content}}
+        </div>
+        <div class="span3" style="background-color:#EEEEE0">
+            <div >
+                <h4 style="background-color:  #0088cc;height: 50px; color: #FFFFFF;line-height:50px; overflow:hidden;margin: 0 ; padding-left:25px;" >
+                    Recent Posts </h4>
+                <ul style="list-style-type:none; margin: 2px 0 2px 25px">
+                    {% for post in site.posts limit:3%}
+                    　<li  style="line-height: 10px;font-size: 17px;"><a href="{{ post.url }}">{{ post.title }}</a> </li>
+                    　　　{% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h4 style="background-color:  #0088cc;height: 50px;color: #FFFFFF;line-height:50px; overflow:hidden; margin: 0 ; padding-left:25px;">
+                    Category List </h4>
+                <ul style="list-style-type:none; margin: 20px 0 5px 25px ">
+                    {% for cat in site.categories %}
+                    <li style="line-height: 10px;font-size: 17px;"><a href="{{ BASE_PATH }}/page/categories.html#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} ({{ cat[1].size }})</a> </li>
+                    　　　{% endfor %}
+                </ul>
+            </div>
+            <div id="tag_cloud">
+                <h4 style="background-color:  #0088cc;height: 50px;color: #FFFFFF;line-height:50px; overflow:hidden; margin: 0 ; padding-left:25px;">
+                    Tag List </h4>
+                <ul style="list-style-type:none;  margin: 10px 0 15px 25px">
+                    {% for tag in site.tags %}
+                    <li style="line-height: 30px;font-size: 17px;">
+                        <a href="{{ BASE_PATH }}/page/tags.html#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }} ({{ tag[1].size }})</a> </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        </div>
     {% if page.comments %}
     {% include comments.md %}
     {% endif %}
+    </div>
 </div>
 
