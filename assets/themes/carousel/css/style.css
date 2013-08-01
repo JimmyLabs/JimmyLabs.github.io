@@ -79,10 +79,10 @@
     }
 
     .carousel .item {
-      height: 650px;
+      height: 500px;
     }
     .carousel img {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       min-width: 100%;

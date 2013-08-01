@@ -5974,11 +5974,12 @@ a.badge:focus {
   position: relative;
   margin-bottom: 20px;
   line-height: 1;
+  width: 85%;
 }
 
 .carousel-inner {
   position: relative;
-  width: 100%;
+
   overflow: hidden;
 }
 
