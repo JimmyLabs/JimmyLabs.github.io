@@ -10,8 +10,6 @@ description: ""
                 <li class="listing-item" style="margin: 7px 0">
                    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
                    <a  style="font-size:20px;margin-left: 50px;" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                   <!--<br>
-                    {{ post.content }}-->
                 </li>
                 {% endfor %}
             </ul>

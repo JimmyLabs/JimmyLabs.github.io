@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>advert</title>
+    <script src="js/three.min.js"></script>
+    <script src="js/TrackballControls.js"></script>
+    <script src="js/jquery-1.4.3.js"></script>
+    <script src="js/calorifier.js"></script>
+    <script type="text/javascript">
+
+    </script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            overflow: hidden;
+        }
+
+        #loadMask {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: #dcdcdc;
+        }
+
+        #background {
+            width: 200px;
+            z-index: 1;
+            background-color: #d3d7d4;
+        }
+
+        #overLoad {
+            width: 0px;
+            z-index: 2;
+            background-color: #0099cc;
+        }
+
+        #showTime {
+            width: 200px;
+            color: #ffffff;
+            font-size: 16px;
+            z-index: 3;
+        }
+
+        #background, #overLoad, #showTime {
+            height: 20px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false">
+
+<div id="container"></div>
+
+<script type="text/javascript">
+
+    var lodtest = new LOAD.GeoItem("container", "js/calorifer_json.js");
+</script>
+<div id="loadMask">
+    <div id="showTime"></div>
+    <div id="background"></div>
+    <div id="overLoad"></div>
+</div>
+</body>
+</html>
