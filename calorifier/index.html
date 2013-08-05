@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>advert</title>
+    <script src="js/three.min.js"></script>
+    <script src="js/TrackballControls.js"></script>
+    <script src="js/jquery-1.4.3.js"></script>
+    <script src="js/calorifier1.js"></script>
+    <script src="js/my.js"></script>
+    <script type="text/javascript">
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body oncontextmenu="return false">
+
+<div id="container"></div>
+
+<script type="text/javascript">
+
+ var lodtest = new LOAD.GeoItem("container", "js/calorifer_json.js");
+</script>
+<div id="showInfo">
+
+</div>
+<div id="showInfo2">
+    <img  class="close" src="imgs/close.png">
+    <div class="nei">
+
+    </div>
+    <div class="cont">
+        <span class="head"></span>
+        <br>
+        <span class="detail">描述文字</span>
+    </div>
+</div>
+<div id="markDiv">
+    <span class="head"></span>
+    <br>
+    <span class="detail">查看详情</span>
+</div>
+<div id="loadMask">
+    <div id="showTime"></div>
+    <div id="background"></div>
+    <div id="overLoad"></div>
+</div>
+</body>
+</html>
