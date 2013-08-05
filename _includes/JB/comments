@@ -11,6 +11,9 @@
   {% include JB/comments-providers/facebook %}
 {% when "custom" %}
   {% include custom/comments %}
+  {% when "duoshuo" %}
+    {% include comments.md %}
+
 {% endcase %}
 
 {% endif %}

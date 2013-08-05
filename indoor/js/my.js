@@ -1,1 +1,157 @@
-﻿eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('3i(1X(p,a,c,k,e,d){e=1X(c){1W(c<a?"":e(3M(c/a)))+((c=c%a)>35?23.2E(c+29):c.2F(36))};1Y(!\'\'.22(/^/,23)){21(c--)d[e(c)]=k[c]||e(c);k=[1X(e){1W d[e]}];e=1X(){1W\'\\\\w+\'};c=1};21(c--)1Y(k[c])p=p.22(1Z 2l(\'\\\\b\'+e(c)+\'\\\\b\',\'g\'),k[c]);1W p}(\'$(3(){1a.1d.1e.1g=3(1f){};p.g(\\\'1b\\\',13,7);3 D(){4 17=(p.1h-1o)/2;4 Y=(p.1p-1r)/2;4 w=$("#1q,#Z,#14");w.m("O",17);w.m("R",Y)};D();3 13(){D()};$("#1i").19(3(){l.s=7;i=F},3(){l.s=F;i=7});$("#1k").B(3(){1l();z=7});$("#z").B(3(){1m();z=F});$("#S").M(3(){L.1j(l);6.K(\\\'f\\\',q,7)});$("#S").P(3(){5(!i){L.1n(l)};6.g(\\\'f\\\',q,7)});$("#e").M(3(){5(!i){6.K(\\\'f\\\',q,7)}});$("#e").P(3(){5(!i){6.g(\\\'f\\\',q,7)}});6.g(\\\'f\\\',N,7);4 V=6.J(".H");4 A=6.J("A");3 N(b){4 9=6.r("9");5(b.Q==2){5(!1c&&!1s&&!11.s){9.a.j="18";4 x=b.1O-1P;4 y=b.1Q-15;9.a.R=\\\'\\\'+y+\\\'C\\\';9.a.O=\\\'\\\'+x+\\\'C\\\'}}n 5(b.Q==0){5(b.1L==$(".H")[0]){(3(){4 16=3(k,8){4 h;["1M","1N","1R","o",""].1V(3(d){5(h)U;5(d==""){8=8.T(0,1).1S()+8.T(1)};4 G=I k[d+8];5(G+""!=="1T"){5(G==="3"){h=k[d+8]()}n{h=k[d+8]}}});U h};5(I p.1K=="1y"){V.g("B",3(){16(A,"1x");9.a.j="t"})}n{1A("1z")}})();}n{9.a.j="t"}}};$("#c").19(3(){$("#e").m(\\\'j\\\',\\\'18\\\')},3(){$("#e").m(\\\'j\\\',\\\'t\\\')});4 u={c:1u};4 E=X 1t.1w({1v:7});4 W=6.r("e");W.1B(E.1H);12=3(v){5(10&&11.s){10.1G.c=X 1J.1I(u.c)}};E.1D(u,"c").1C(12);6.r(\\\'Z\\\').a.1F=0+"C";6.r(\\\'14\\\').1E="1U%"});\',2D,2I,\'|||1X|2H|1Y|2G|2C|2y|2x|2w|2B|2A|2z|2J|2T|2S|2R|2W|2V|2U|2Q|2M|2L||2K|2P|2O|2N|2v|2e||2d|||2c|2h|2g|2f|2b|24|25|26|2a|28|27|2r|2q|2p|2u|2t|2s|2o|2k|2j|2i|1W|2n|2m|1Z|3D|3C|3B|3E|3H|3G|3F||3A|3v|3u|3t|3w|3z|3y|3x|3S|3T|3Q|3W|3R|3V|3U|3K|3L|3I|3J|3O|3P|20|3N|39|38|37|3a|3d|3c|3b|34|2Z|2Y|2X|30|33|32|31|3o|3n|3m|3p|3s|3r|3q|35|3l|3g|3f|3e|3h|3k\'.3j(\'|\'),0,{}))',62,245,'||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||return|function|if|new||while|replace|String|colorcontrol|true|typePrefixMethod|querySelector|typeof||full|loadOSFun|indoor|loadOS|colorparogramers|px|click|body|slice|no3Devent|top|RegExp|colorpaneldiv|eleFull|button|mousemove|scene|removeEventListener|mouseleave|left|onMouseDown|none|style|operate|method|prefix|color|event|false|62|fromCharCode|toString|document|var|120|colorpanel|window|else|css|visible|getElementById|onDocumentMouseDown|mouseMark|usablePrefixMethod|addEventListener|mousedown|element|display|editorFlag|addColor|onChange|appendChild|innerHTML|domElement|material|width|alert|||autoPlace|0X555555|dat|GUI|浏览器不支持html5|number|RequestFullScreen|undefined|toLowerCase|ms|已加载0|eval|split|forEach|clientY|screenX|THREE|Color|target|clientX|moz|webkit|toggle|block|osLeft|console|constructor|alt|resize|runPrefixMethod|mark|overLoad|osTop|selectionBox|showTime|WindowResize|changeMaterialcolor|add|200|outdoorScene|indoorScene|parseInt|ctrl|innerHeight|background|log|editor|prototype|message|outdoor|remove|innerWidth'.split('|'),0,{}))
+/**
+ * Created with JetBrains WebStorm.
+ * User: Administrator
+ * Date: 13-6-26
+ * Time: 上午11:00
+ * To change this template use File | Settings | File Templates.
+ */
+$(function () {
+    if(!Detector.webgl)Detector.addGetWebGLMessage();
+
+ console.constructor.prototype.log=function(message){};
+    window.addEventListener('resize', WindowResize, false);
+    function loadOSFun() {
+        var osLeft = (window.innerWidth - 200) / 2;
+        var osTop = (window.innerHeight - 20) / 2;
+        var loadOS = $("#background,#overLoad,#showTime");
+        loadOS.css("left", osLeft);
+        loadOS.css("top", osTop);
+    }
+
+    loadOSFun();
+    function WindowResize() {
+        loadOSFun();
+    }
+
+    $("#editor").toggle(
+        function () {
+            mouseMark.visible = false;
+            editorFlag = true;
+        },
+        function () {
+            mouseMark.visible = true;
+            editorFlag = false;
+        }
+    );
+    $("#outdoor").click(
+        function () {
+            outdoorScene();
+            indoor = false;
+        }
+    );
+    $("#indoor").click(
+        function () {
+            indoorScene();
+            indoor = true;
+        }
+    );
+
+    $("#no3Devent").mousemove(function () {
+        scene.remove(mouseMark);
+        document.removeEventListener('mousedown', onDocumentMouseDown, false);
+    });
+    $("#no3Devent").mouseleave(function () {
+        if (!editorFlag) {
+            scene.add(mouseMark);
+        }
+        document.addEventListener('mousedown', onDocumentMouseDown, false);
+    });
+
+    $("#colorpanel").mousemove(function () {
+        if (!editorFlag) {
+            document.removeEventListener('mousedown', onDocumentMouseDown, false);
+        }
+
+    });
+    $("#colorpanel").mouseleave(function () {
+        if (!editorFlag) {
+            document.addEventListener('mousedown', onDocumentMouseDown, false);
+        }
+
+    });
+
+    document.addEventListener('mousedown', onMouseDown, false);
+    var eleFull = document.querySelector(".full");
+    var body = document.querySelector("body");
+
+    function onMouseDown(event) {
+        var operate = document.getElementById("operate");
+        if (event.button == 2) {
+            if (!alt && !ctrl && !selectionBox.visible) {
+                operate.style.display = "block";
+                var x = event.clientX - 35;
+                var y = event.clientY - 15;
+                operate.style.top = '' + y + 'px';
+                operate.style.left = '' + x + 'px';
+            }
+
+        } else if (event.button == 0) {
+            if (event.target == $(".full")[0]) {
+                //全屏开始
+                (function () {
+                    var runPrefixMethod = function (element, method) {
+                        var usablePrefixMethod;
+                        ["webkit", "moz", "ms", "o", ""].forEach(function (prefix) {
+                            if (usablePrefixMethod) return;
+                            if (prefix == "") {
+                                // 无前缀，方法首字母小写
+                                method = method.slice(0, 1).toLowerCase() + method.slice(1);
+
+                            }
+
+                            var typePrefixMethod = typeof element[prefix + method];
+                            if (typePrefixMethod + "" !== "undefined") {
+                                if (typePrefixMethod === "function") {
+                                    usablePrefixMethod = element[prefix + method]();
+                                } else {
+                                    usablePrefixMethod = element[prefix + method];
+                                }
+                            }
+                        });
+
+                        return usablePrefixMethod;
+                    };
+
+                    if (typeof window.screenX == "number") {
+                        eleFull.addEventListener("click", function () {
+
+                            runPrefixMethod(body, "RequestFullScreen");
+                            operate.style.display = "none";
+
+                        });
+                    } else {
+                        alert("浏览器不支持html5");
+                    }
+                })();
+                //全屏结束
+            } else {
+                operate.style.display = "none";
+            }
+
+        }
+    }
+
+    //换颜色开始
+    $("#color").toggle(function () {
+            $("#colorpanel").css('display', 'block')
+        },
+        function () {
+            $("#colorpanel").css('display', 'none')
+        });
+    var colorparogramers = {color:0X555555};
+    var colorcontrol = new dat.GUI({autoPlace:false});
+    var colorpaneldiv = document.getElementById("colorpanel");
+    colorpaneldiv.appendChild(colorcontrol.domElement);
+    changeMaterialcolor = function (v) {
+        if (mark && selectionBox.visible) {
+            mark.material.color = new THREE.Color(colorparogramers.color);
+
+        }
+        //mesh.material.color=new THREE.Color(colorparogramers.color)
+    };
+    colorcontrol.addColor(colorparogramers, "color").onChange(changeMaterialcolor);
+//换颜色结束
+    //加载显示样式
+    document.getElementById('overLoad').style.width = 0 + "px";
+    document.getElementById('showTime').innerHTML = "已加载0%";
+});

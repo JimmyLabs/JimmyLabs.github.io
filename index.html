@@ -75,7 +75,7 @@ title: JimLabs
             <p style="margin-top: 10px"><img class="img-rounded" data-src="holder.js/50x50" src="{{ BASE_PATH }}/assets/themes/carousel/img/blog.jpg">
             </p>
                 <ul style="list-style-type:none; text-align: left">
-                    {% for post in site.posts limit:5%}
+                    {% for post in site.posts limit:3%}
                     　<li  style="line-height: 10px;font-size: 17px;">
                     <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
                             <a href="{{ post.url }}" style="margin-left: 30px;">{{ post.title }}</a> </li>
@@ -86,19 +86,21 @@ title: JimLabs
             <p style="margin-top: 10px"><img class="img-rounded" data-src="holder.js/50x50" src="{{ BASE_PATH }}/assets/themes/carousel/img/comment.jpg">
             </p>
        <span class="category">
-          <ul class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="0" data-show-title="0" data-show-admin="0" data-excerpt-length="18"></ul>
+            <ul class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="0" data-show-title="0"
+                data-show-admin="0" data-excerpt-length="18"></ul>
         </span>
         </div>
-        <div class="span4" style="background:#EEEEE0 ">
-            <p style="margin-top: 10px"><img class="img-rounded" data-src="holder.js/50x50" src="{{ BASE_PATH }}/assets/themes/carousel/img/contact.jpg">
+        <div class="span4" style="background:#EEEEE0;text-align: left; ">
+            <p style="margin-top: 10px">
+                <img class="img-rounded" data-src="holder.js/50x50" src="{{ BASE_PATH }}/assets/themes/carousel/img/contact.jpg">
             </p>
-            <p>Q Q <span style="margin-left: 30px">20688101</span>
+            <p style="margin-left: 20px;">Q  Q <span style="margin-left: 30px"> 20688101</span>
             </p>
-            <p> 微博
-                <span>20688101</span>
+            <p style="margin-left: 20px;"> 微博
+                <span style="margin-left: 30px">20688101</span>
             </p>
-            <p> 邮箱
-                <span>20688101@qq.com</span>
+            <p style="margin-left: 20px;"> 邮箱
+                <span style="margin-left: 30px" >20688101@qq.com</span>
             </p>
         </div>
     </div>
