@@ -1,110 +1,41 @@
 ---
 layout: default
-title: JimLabs
+title: Homepage
 ---
-{% include JB/setup %}
-<script src="{{ BASE_PATH }}/assets/themes/carousel/js/jquery.js"></script>
-    <script src="{{ BASE_PATH }}/assets/themes/carousel/js/bootstrap-transition.js"></script>
-    <script src="{{ BASE_PATH }}/assets/themes/carousel/js/bootstrap-alert.js"></script>
-    <script src="{{ BASE_PATH }}/assets/themes/carousel/js/bootstrap-modal.js"></script>
-	<script src="{{ BASE_PATH }}/assets/themes/carousel/js/bootstrap-dropdown.js"></script>
-    <script src="{{ BASE_PATH }}/assets/themes/carousel/js/bootstrap-scrollspy.js"></script>
-    <script src="{{ BASE_PATH }}/assets/themes/carousel/js/bootstrap-tab.js"></script>
-    <script src="{{ BASE_PATH }}/assets/themes/carousel/js/bootstrap-tooltip.js"></script>
-    <script src="{{ BASE_PATH }}/assets/themes/carousel/js/bootstrap-popover.js"></script>
-    <script src="{{ BASE_PATH }}/assets/themes/carousel/js/bootstrap-button.js"></script>
-    <script src="{{ BASE_PATH }}/assets/themes/carousel/js/bootstrap-collapse.js"></script>
-    <script src="{{ BASE_PATH }}/assets/themes/carousel/js/bootstrap-carousel.js"></script>
-    <script src="{{ BASE_PATH }}/assets/themes/carousel/js/bootstrap-typeahead.js"></script>
-    <script>
-      !function ($) {
-        $(function(){
-          // carousel demo
-          $('#myCarousel').carousel();
 
-        })
-      }(window.jQuery)
-    </script>
-    <script src="{{ BASE_PATH }}/assets/themes/carousel/js/holder/holder.js"></script>
-	 <link href="{{ BASE_PATH }}/assets/themes/carousel/css/bootstrap.css" rel="stylesheet">
-    <link href="{{ BASE_PATH }}/assets/themes/carousel/css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="{{ BASE_PATH }}/assets/themes/carousel/css/style.css" rel="stylesheet">
-<!-- Carousel
-    ================================================== -->
-
-    <div id="myCarousel" class="carousel slide" style="margin-left: auto;margin-right: auto;/*text-align: center;*/">
-      <div class="carousel-inner" style="margin-left: auto;margin-right: auto;">
-		<div class="item active">
-          <img src="{{ BASE_PATH }}/assets/themes/carousel/img/1.jpg" alt="" class="img-rounded">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Team Introduction </h1>
-              <p class="lead"></p>
-              <a class="btn btn-large btn-primary" href="{{ BASE_PATH }}/page/team.html">Details</a>
-            </div>
-          </div>
+<div id="home">
+  <ul class="posts">
+    {% for post in site.posts %}
+    <li itemscope itemtype="http://schema.org/BlogPosting">
+      <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">
+        <div class="p-wrap">
+          <time datetime="{{ post.date | date_to_xmlschema }}"
+              itemprop="datePublished">
+            {{ post.date | date_to_string }}
+          </time>
+          <p itemprop="name headline">{{ post.title }}</p>
         </div>
-		<!--<div class="item ">
-          <img src="{{ BASE_PATH }}/assets/themes/carousel/img/2.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Working mode:<p style="margin-top: 10px">
-                    The whiteboard</p></h1>
-              <a class="btn btn-large btn-primary" href="#">Details</a>
-            </div>
-          </div>
-        </div>-->
-        <div class="item ">
-          <img src="{{ BASE_PATH }}/assets/themes/carousel/img/indoor.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Indoor Roaming</h1>
-              <a class="btn btn-large btn-primary" href="{{ BASE_PATH }}/indoor/index.html">Details</a>
-            </div>
-          </div>
-        </div>
-      </div>
-        <a class=" carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-        <a class=" carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-
-    </div><!-- /.carousel -->
-
-<!--
-<div class="container marketing">
-    <div class="row">
-        <div class="span4" style="background:#EEEEE0 ">
-            <p style="margin-top: 10px"><img class="img-rounded" data-src="holder.js/50x50" src="{{ BASE_PATH }}/assets/themes/carousel/img/blog.jpg">
-            </p>
-                <ul style="list-style-type:none; text-align: left">
-                    {% for post in site.posts limit:3%}
-                    　<li  style="line-height: 10px;font-size: 17px;">
-                    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                            <a href="{{ post.url }}" style="margin-left: 30px;">{{ post.title }}</a> </li>
-                    　　　{% endfor %}
-                </ul>
-        </div>
-        <div class="span4"  style="background:#EEEEE0 ">
-            <p style="margin-top: 10px"><img class="img-rounded" data-src="holder.js/50x50" src="{{ BASE_PATH }}/assets/themes/carousel/img/comment.jpg">
-            </p>
-       <span class="category">
-            <ul class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="0" data-show-title="0"
-                data-show-admin="0" data-excerpt-length="18"></ul>
-        </span>
-        </div>
-        <div class="span4" style="background:#EEEEE0;text-align: left; ">
-            <p style="margin-top: 10px">
-                <img class="img-rounded" data-src="holder.js/50x50" src="{{ BASE_PATH }}/assets/themes/carousel/img/contact.jpg">
-            </p>
-            <p style="margin-left: 20px;">Q  Q <span style="margin-left: 30px">  20688101</span>
-            </p>
-            <p style="margin-left: 20px;"> 微博
-                <span style="margin-left: 30px">20688101</span>
-            </p>
-            <p style="margin-left: 20px;"> 邮箱
-                <span style="margin-left: 30px" >20688101@qq.com</span>
-            </p>
-        </div>
-    </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
--->
 
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.next_page %}
+  <a href="/page/{{paginator.next_page}}" class="older">Older</a>
+  {% else %}
+  <span class="next">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+    <a href="/" class="newer">Newer</a>
+    {% else %}
+    <a href="/page/{{paginator.previous_page}}" class="newer">Newer</a>
+    {% endif %}
+  {% else %}
+  <span class="previous">Newer</span>
+  {% endif %}
+</div>
+{% endif %}
